@@ -1,0 +1,16 @@
+.infoContainer {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: white;
+  .yellowLine {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1px;
+    width: 0%;
+    background-color: yellow;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}

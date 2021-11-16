@@ -13,7 +13,6 @@ function Nav() {
             scrub: 1,
             start:"middle top",
             end:"bottom top",
-            markers:true
         },
         duration:3,marginRight:`auto`})
     }, [])
@@ -21,10 +20,10 @@ function Nav() {
         <nav className="navbar" ref={e=>navRef=e}>
             <div className="animationBox a">
                 <a className="navItem">Info</a>
-                <a className="navItem">Skills</a>
+                <a className="navItem">Projects</a>
             </div>
             <div className="animationBox b">
-                <a className="navItem">Projects</a>
+                <a className="navItem">Skills</a>
                 <a className="navItem">Contact</a>
             </div>
         </nav>

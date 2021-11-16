@@ -9,8 +9,30 @@
     left: 50%;
     height: 1px;
     width: 0%;
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.863);
     transform: translateX(-50%);
     z-index: 1;
+  }
+  .subContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    div {
+      height: 200px;
+      width: 200px;
+      float: left;
+      border-radius: 50%;
+      background-color: red;
+      opacity: 0;
+    }
+  }
+  p {
+    height: 200px;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    color: white;
   }
 }

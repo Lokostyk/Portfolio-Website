@@ -1,0 +1,53 @@
+@import "../../Styles/mainColors";
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  background-color: $background;
+  .projectCard {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    box-shadow: $emphasis 0px -1px 5px;
+    background-color: $background;
+    border-radius: 10px;
+    overflow: hidden;
+    & > img {
+      width: 28vw;
+    }
+    h1 {
+      color: $emphasis;
+      margin: 0.2rem 0 0.4rem 0;
+    }
+    li {
+      margin: 0.2rem 0;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: white;
+      background-color: inherit;
+      border: 1px solid $emphasis;
+      border-right: none;
+      border-left: none;
+      margin: 1rem 0;
+      img {
+        transform: scale(0.8);
+        animation: pulse 1.5s infinite both;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.8);
+        }
+        50% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}

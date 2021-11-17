@@ -12,7 +12,7 @@ function Info() {
             scrub:1,
             start:"top bottom",
             end: "top top"
-        },backgroundColor:"#181818",duration:2})
+        },backgroundColor:"#181A18",duration:2})
         gsap.to(infoRef.querySelector(".yellowLine"),{scrollTrigger:{
             trigger:infoRef.querySelector(".yellowLine"),
             scrub:1,

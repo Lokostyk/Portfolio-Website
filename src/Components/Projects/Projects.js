@@ -1,23 +1,17 @@
 import "./projects.scss"
 
 import React from 'react'
+import ProjectCard from "./subcomponents/ProjectCard" 
 
 function Projects() {
+    const projectData = [{id:1,image:"/Images/social_media.jpg",title:"Social Media Website",stack:["React","React-hooks","Sass","Firebase"],reverse:""},
+                        {id:2,image:"/Images/shop.jpg",title:"E-commerce",stack:["React","React-redux","React-router","Sass","Gsap"],reverse:""},
+                        {id:2,image:"/Images/weather.jpg",title:"Weather Forecast",stack:["Html","Css","Javascript","Chart.js","Leaflet.js"],reverse:""}]
     return (
         <section className="projectContainer">
-            <div className="projectCard">
-                <img src="/Images/shop.jpg"/>
-                <h1>E-commerce Website</h1>
-                <h3>Stack used:</h3>
-                <ul>
-                    <li>React</li>
-                    <li>React-redux</li>
-                    <li>React-router</li>
-                    <li>Sass</li>
-                    <li>Gsap</li>
-                </ul>
-                <button><img src="/Images/arrow2.svg"/>Check reverse<img src="/Images/arrow.svg"/></button>
-            </div>
+            {projectData.map((item)=>{
+                return <ProjectCard key={item.id} projectData={item}/>
+            })}
         </section>
     )
 }

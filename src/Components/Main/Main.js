@@ -6,19 +6,19 @@ import CSSRulePlugin from "gsap/CSSRulePlugin"
 gsap.registerPlugin(CSSRulePlugin)
 function Main() {
     useEffect(()=>{
-        const y = document.querySelector(".mainCircle")
-        console.log(y)
+        const circle = document.querySelector(".mainCircle")
         const beforeRef = CSSRulePlugin.getRule(".mainContainer .mainCircle::before")
-        console.log(beforeRef)
-        gsap.from(beforeRef,{clipPath: "polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)",duration:2})
+        gsap.from(beforeRef,{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",duration:2})
+        gsap.from(circle,{opacity:0,duration:2})
+        gsap.from(circle.querySelectorAll(".emphasisMain"),{opacity:0,delay:1,duration:1})
     },[])
 
     return (
         <section className="mainContainer">
             <img className="backgroudImage" src="/Images/background.jpg"/>
             <div className="mainCircle">
-                <h1>Hi, I am <br/><span className="blue">Marcin Ziemba</span></h1>
-                <p>Guy who creates <span className="blue">cool</span> and <span className="blue">functional</span> websites.</p>
+                <h1>Hi<br/>I am <span className="emphasisMain">Marcin</span></h1>
+                <p>Guy who creates <span className="emphasisMain">cool</span> and <span className="emphasisMain">functional</span> websites.</p>
                 <p>And have fun with it!</p>
             </div>
         </section>

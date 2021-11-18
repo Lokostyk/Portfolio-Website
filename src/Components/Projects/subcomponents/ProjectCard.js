@@ -3,7 +3,7 @@ import React from 'react'
 function ProjectCard(props) {
     const {image,title,stack} = props.projectData
     return (
-            <div className={`projectCard ${title === "E-commerce"?title:""}`}>
+            <div className="projectCard">
                 <img src={image}/>
                 <h1>{title}</h1>
                 <h3>Stack used:</h3>

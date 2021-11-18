@@ -18,16 +18,17 @@
     transition: 0.5s transform;
     z-index: 0;
     &:nth-of-type(2) {
-      box-shadow: $emphasis 0px -1px 5px;
-      transform: scale(1);
-      opacity: 1;
-      z-index: 1;
+      order: 3;
+      margin-left: -8%;
     }
     &:first-of-type {
       margin-right: -8%;
     }
     &:last-of-type {
-      margin-left: -8%;
+      box-shadow: $emphasis 0px -1px 5px;
+      transform: scale(1);
+      opacity: 1;
+      z-index: 1;
     }
     &:hover {
       box-shadow: $emphasis 0px -1px 5px;
@@ -74,5 +75,8 @@
         }
       }
     }
+  }
+  &:first-child:hover ~ &:nth-child(2) {
+    background-color: #fff;
   }
 }

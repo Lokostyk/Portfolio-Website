@@ -49,7 +49,9 @@
       z-index: -1;
     }
     .emphasisMain {
+      display: inline-block;
       color: $emphasis;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
     h1 {
       font-size: 3rem;

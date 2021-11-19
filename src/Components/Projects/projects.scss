@@ -6,17 +6,22 @@
   .projectCard {
     margin: 2rem 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    box-shadow: $emphasis 0px -1px 3px;
-    background-color: $background;
+    position: relative;
     border-radius: 10px;
-    overflow: hidden;
-    opacity: 0.9;
     transform: scale(0.9);
     transition: 0.5s transform;
     z-index: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(1px);
+      pointer-events: none;
+      z-index: 1;
+    }
     &:nth-of-type(2) {
       order: 3;
       margin-left: -8%;
@@ -25,26 +30,71 @@
       margin-right: -8%;
     }
     &:last-of-type {
-      box-shadow: $emphasis 0px -1px 5px;
       transform: scale(1);
       opacity: 1;
       z-index: 1;
+      .front {
+        box-shadow: $emphasis 0px -1px 5px;
+      }
+      &:before {
+        backdrop-filter: blur(0px);
+      }
     }
     &:hover {
-      box-shadow: $emphasis 0px -1px 5px;
       transform: scale(1);
       opacity: 1;
       z-index: 1;
+      .front {
+        box-shadow: $emphasis 0px -1px 5px;
+      }
+      &:before {
+        backdrop-filter: blur(0px);
+      }
     }
-    & > img {
-      width: 28vw;
+    &:first-of-type:hover ~ :last-of-type,
+    &:nth-of-type(2):hover ~ :last-of-type {
+      transform: scale(0.9);
+      z-index: 0;
+      &:before {
+        backdrop-filter: blur(1px);
+      }
+    }
+    .front,
+    .reverse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $background;
+      box-shadow: $emphasis 0px -1px 3px;
+      border-radius: 10px;
+      transition: 0.4s all;
+      color: white;
+    }
+    .front {
+      transition-delay: 0.3s;
+      overflow: hidden;
+      & > img {
+        width: 28vw;
+      }
+    }
+    .reverse {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0) rotateY(90deg);
     }
     h1 {
       color: $emphasis;
       margin: 0.2rem 0 0.4rem 0;
     }
-    ul {
+    ul,
+    p {
       margin: 0 0 auto 0;
+    }
+    p {
+      padding: 0 0.5rem;
     }
     li {
       margin: 0.2rem 0;
@@ -76,7 +126,14 @@
       }
     }
   }
-  &:first-child:hover ~ &:nth-child(2) {
-    background-color: #fff;
+}
+.revertCard {
+  .front {
+    transform: rotateY(90deg);
+    transition-delay: 0s !important;
+  }
+  .reverse {
+    transform: translate(-50%, 0) rotateY(0deg) !important;
+    transition-delay: 0.3s !important;
   }
 }

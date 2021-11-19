@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger)
 function Nav() {
     let navRef = useRef(null)
     useEffect(() => {
-        const tl = gsap.timeline({})
         gsap.to(navRef.querySelector(".a"),{scrollTrigger:{
             trigger: navRef.querySelector(".a"),
             scrub: 1,

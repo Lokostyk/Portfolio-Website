@@ -28,11 +28,12 @@ function Info() {
             <div className="subContainer">
                 <div className="ball" />
                 <p>
-                    djuaiwu dihau wihd huwaihdua ihwdui hwad uuhwui hdaw udih
-                    djuaiwu dihau wihd huwaihdua ihwdui hwad uuhwui hdaw udih
-                    djuaiwu dihau wihd huwaihdua ihwdui hwad uuhwui hdaw udih
-                    djuaiwu dihau wihd huwaihdua ihwdui hwad uuhwui hdaw udih
-                    djuaiwu dihau wihd huwaihdua ihwdui hwad uuhwui hdaw udih
+                    I'am Marcin Ziemba, young programmer with a goal of becomming Frontend Developer.
+                    Eager to learn new things,ambitious and consistent.
+                    I started programming with C++ quickly moved to web development.
+                    It is what began to give me happiness and fulfillment.
+                    Each of my projects is created with passion and attention to detail.
+                    As a communicative and friendly I'am comfortable with team work and sharing my knowledge to others.
                 </p>
             </div>
         </section>

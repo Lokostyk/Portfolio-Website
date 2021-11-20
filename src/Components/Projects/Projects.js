@@ -14,7 +14,6 @@ function Projects() {
     let projectRef = useRef(null)
     useEffect(()=>{
         const cardsRef = projectRef.querySelectorAll(".projectCard")
-        console.log(cardsRef[0])
         gsap.from(cardsRef[2],{scrollTrigger:{
             trigger:cardsRef[2],
             start:"top 60%"

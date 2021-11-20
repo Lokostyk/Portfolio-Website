@@ -5,7 +5,6 @@ import gsap,{ScrollTrigger} from "gsap/all"
 gsap.registerPlugin(ScrollTrigger)
 function Info() {
     let infoRef = useRef(null)
-    const tl = gsap.timeline({duration:1})
     useEffect(()=>{
         gsap.to(infoRef,{scrollTrigger:{
             trigger:infoRef,
@@ -33,7 +32,7 @@ function Info() {
                     I started programming with C++ quickly moved to web development.
                     It is what began to give me happiness and fulfillment.
                     Each of my projects is created with passion and attention to detail.
-                    As a communicative and friendly I'am comfortable with team work and sharing my knowledge to others.
+                    As a communicative and friendly person, I'am comfortable with team work and sharing my knowledge to others.
                 </p>
             </div>
         </section>

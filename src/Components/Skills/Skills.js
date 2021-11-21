@@ -3,9 +3,8 @@ import "./skills.scss"
 import React,{useEffect,useRef} from 'react'
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import { CSSRulePlugin } from "gsap/all"
 
-gsap.registerPlugin(ScrollTrigger,CSSRulePlugin)
+gsap.registerPlugin(ScrollTrigger)
 function Skills() {
     const skillsList = [{img:"figma.svg",name:"Figma"},{img:"github.svg",name:"GitHub/Git"},{img:"html.svg",name:"HTML"}
     ,{img:"css.svg",name:"CSS"},{img:"sass.svg",name:"Sass"},{img:"javascript.svg",name:"Javascript(ES6)"},{img:"react.svg",name:"React"}
@@ -15,7 +14,6 @@ function Skills() {
         const allSkills = containerRef.getElementsByTagName("li")
         const allSkillsImages = containerRef.getElementsByTagName("img")
         const allSkillsNames = containerRef.getElementsByTagName("span")
-        const title = CSSRulePlugin.getRule(".skillsContainer li:nth-of-type(6)::before")
         const tl = gsap.timeline({duration:1})
         setTimeout(()=>{
             Array.from(allSkillsImages).forEach((el)=>{

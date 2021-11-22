@@ -7,24 +7,25 @@ gsap.registerPlugin(ScrollTrigger)
 function Nav() {
     let navRef = useRef(null)
     useEffect(() => {
-        gsap.to(navRef.querySelector(".a"),{scrollTrigger:{
-            trigger: navRef.querySelector(".a"),
-            scrub: 1,
-            start:"middle top",
-            end:"bottom top",
-        },
-        duration:3,marginRight:`auto`})
+        const navbarItems = document.querySelectorAll(".navItem")
+        let lastScrollPosition = document.body.getBoundingClientRect().top
+        window.addEventListener("scroll",()=>{
+            const currentScrollPosition = document.body.getBoundingClientRect().top
+            if(lastScrollPosition>currentScrollPosition){
+                Array.from(navbarItems).forEach((item)=>{
+                    item.classList.remove("active")
+                })
+            }
+            lastScrollPosition = currentScrollPosition
+        })
     }, [])
     return (
         <nav className="navbar" ref={e=>navRef=e}>
-            <div className="animationBox a">
-                <a className="navItem">Info</a>
-                <a className="navItem">Projects</a>
-            </div>
-            <div className="animationBox b">
-                <a className="navItem">Skills</a>
-                <a className="navItem">Contact</a>
-            </div>
+                <button onClick={()=>Array.from(document.querySelectorAll(".navItem")).forEach((i)=>i.classList.add("active"))}><img src="/Images/navArrow.svg" /></button>
+                <a className="navItem active">Info</a>
+                <a className="navItem active">Projects</a>
+                <a className="navItem active">Skills</a>
+                <a className="navItem active">Contact</a>
         </nav>
     )
 }

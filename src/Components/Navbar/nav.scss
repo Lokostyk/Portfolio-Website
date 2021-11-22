@@ -1,31 +1,40 @@
+@import "../../Styles/mainColors";
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
+  max-height: 100px;
   width: 100vw;
-  overflow: hidden;
-  z-index: 1;
+  z-index: 5;
+  button {
+    padding: 0.5rem 0;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: unset;
+    border: unset;
+  }
   .navItem {
-    position: relative;
-    left: auto;
-    margin-left: 0px;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 0;
     font-size: 1.2rem;
+    line-height: 1.9rem;
+    font-weight: 500;
     color: white;
+    overflow: hidden;
+    max-width: 0px;
     transition: 0.5s all;
     &:hover {
-      color: yellow;
+      color: $emphasis;
     }
   }
-  .animationBox {
-    display: flex;
-  }
-  .a {
-    margin-top: 0.3rem;
-  }
-  .b {
-    margin-top: 0.3rem;
+  .active {
+    padding: 0.5rem 2rem;
+    max-width: 250px;
+
+    &:first-of-type {
+      padding-left: 0px;
+    }
   }
 }

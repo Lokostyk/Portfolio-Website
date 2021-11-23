@@ -5,6 +5,11 @@
   display: flex;
   justify-content: center;
   background-color: $background;
+  .overflow {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
   .projectCard {
     margin: 2rem 0;
     display: flex;
@@ -96,6 +101,7 @@
       margin: 0 0 auto 0;
     }
     p {
+      text-align: center;
       padding: 0 0.5rem;
     }
     li {
@@ -137,5 +143,77 @@
   .reverse {
     transform: translate(-50%, 0) rotateY(0deg) !important;
     transition-delay: 0.3s !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .projectContainer .projectCard .front > img {
+    width: 35vw;
+  }
+  .projectContainer {
+    padding-bottom: 12rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .projectContainer {
+    .projectCard .front > img {
+      width: 38vw;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .projectContainer {
+    padding-bottom: 4rem;
+    .overflow {
+      flex-direction: column;
+      overflow: visible;
+    }
+    .projectCard {
+      margin: 1rem 0;
+      pointer-events: none;
+      transform: scale(1);
+      &:nth-of-type(2) {
+        margin: 1rem 0;
+      }
+      &:first-of-type:hover ~ :last-of-type,
+      &:nth-of-type(2):hover ~ :last-of-type {
+        transform: none;
+      }
+      &:last-of-type {
+        .fron {
+          box-shadow: $emphasis 0px -1px 3px;
+        }
+      }
+      &:before {
+        display: none;
+      }
+      .front > img {
+        width: 70vw;
+      }
+    }
+    button {
+      pointer-events: auto;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .projectContainer {
+    .projectCard {
+      p {
+        font-size: 0.9rem;
+      }
+      &:first-of-type {
+        margin-right: 0;
+      }
+      .front > img {
+        width: 90vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .projectContainer .projectCard:first-of-type {
+    p {
+      font-size: 0.85rem;
+    }
   }
 }

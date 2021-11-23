@@ -21,15 +21,15 @@ function Projects() {
         gsap.from(cardsRef[0],{scrollTrigger:{
             trigger:cardsRef[0],
             start:"top 60%"
-        },right:"100%",pointerEvents:"none",duration:1.5})
+        },right:"125%",pointerEvents:"none",duration:1.5})
         gsap.from(cardsRef[1],{scrollTrigger:{
             trigger:cardsRef[1],
             start:"top 60%"
-        },left:"100%",pointerEvents:"none",duration:1.5})
+        },left:"125%",pointerEvents:"none",duration:1.5})
     },[])
     return (
         <section className="projectContainer" ref={e=>projectRef=e}>
-            <div style={{display:"flex",justifyContent:"center",overflow:"hidden"}}>
+            <div className="overflow">
                 {projectData.map((item)=>{
                     return <ProjectCard key={item.id} projectData={item}/>
                 })}

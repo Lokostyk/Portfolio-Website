@@ -1,17 +1,17 @@
 @import "../../Styles/mainColors";
 .skillsContainer {
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   width: 100vw;
   background-color: $background;
   h1 {
-    text-align: center;
     color: white;
+    text-align: center;
   }
   ul {
+    margin-left: -1.5rem;
     display: flex;
     justify-content: center;
     color: white;
-
     background-color: $background;
   }
   li {
@@ -44,5 +44,65 @@
   }
   img {
     height: 6vw;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .skillsContainer {
+    padding-bottom: 15rem;
+    ul {
+      margin-left: -3rem;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .skillsContainer {
+    ul {
+      margin-left: 1.5rem;
+      flex-wrap: wrap;
+    }
+    li {
+      margin: 1rem 0;
+      height: 9rem;
+      width: 18vw;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: auto;
+        width: 5rem;
+      }
+      &:nth-of-type(6) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .skillsContainer {
+    padding-bottom: 4rem;
+    ul {
+      margin: 0;
+    }
+    li {
+      width: 28vw;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .skillsContainer {
+    ul {
+      margin-left: 0.2rem;
+    }
+    li {
+      height: 5.5rem;
+      width: 32vw;
+      img {
+        width: 3rem;
+      }
+      span {
+        font-size: 0.9rem;
+      }
+    }
   }
 }

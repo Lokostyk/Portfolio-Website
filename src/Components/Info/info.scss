@@ -31,9 +31,42 @@
     }
   }
   p {
-    height: 200px;
     font-size: 1.1rem;
     letter-spacing: 1.2px;
     color: white;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .infoContainer {
+    height: 80vh;
+    p {
+      font-size: 1.5rem;
+    }
+    .subContainer {
+      width: 850px;
+      div {
+        width: 320px;
+        height: 320px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .infoContainer {
+    .subContainer {
+      width: 90%;
+      div {
+        margin: 0 auto;
+        float: none;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .infoContainer p {
+    font-size: 1rem;
   }
 }

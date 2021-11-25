@@ -68,7 +68,7 @@ function Skills() {
         },10)
     },[])
     return (
-        <section className="skillsContainer" ref={e=>containerRef=e}>
+        <section className="skillsContainer" id="Skills" ref={e=>containerRef=e}>
             {document.body.clientWidth < 1200?
                 <h1>Current Stack</h1>:""}
             <ul>

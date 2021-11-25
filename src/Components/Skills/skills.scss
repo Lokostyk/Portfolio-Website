@@ -1,6 +1,6 @@
 @import "../../Styles/mainColors";
 .skillsContainer {
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem 0;
   width: 100vw;
   background-color: $background;
   h1 {
@@ -80,7 +80,7 @@
 }
 @media screen and (max-width: 700px) {
   .skillsContainer {
-    padding-bottom: 4rem;
+    padding: 2.5rem 0 4rem 0;
     ul {
       margin: 0;
     }

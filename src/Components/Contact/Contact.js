@@ -25,7 +25,7 @@ function Contact() {
         },100)
     },[])
     return (
-        <section className="contactContainer" ref={e=>containerRef=e}>
+        <section className="contactContainer" id="Contact" ref={e=>containerRef=e}>
             <h1>Let's talk.But you first.</h1>
             <form action="https://formsubmit.co/mziemba@loken.pl" method="POST" >
                 <input type="email" name="email" value={formData.email} placeholder="E-mail"

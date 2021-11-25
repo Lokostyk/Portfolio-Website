@@ -28,7 +28,7 @@ function Projects() {
         },left:"125%",pointerEvents:"none",duration:1.5})
     },[])
     return (
-        <section className="projectContainer" ref={e=>projectRef=e}>
+        <section className="projectContainer" id="Projects" ref={e=>projectRef=e}>
             <div className="overflow">
                 {projectData.map((item)=>{
                     return <ProjectCard key={item.id} projectData={item}/>

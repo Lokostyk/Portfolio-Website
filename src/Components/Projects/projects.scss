@@ -1,6 +1,6 @@
 @import "../../Styles/mainColors";
 .projectContainer {
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -150,7 +150,7 @@
     width: 35vw;
   }
   .projectContainer {
-    padding-bottom: 12rem;
+    padding-bottom: 7rem;
   }
 }
 @media screen and (max-width: 900px) {
@@ -162,7 +162,7 @@
 }
 @media screen and (max-width: 800px) {
   .projectContainer {
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
     .overflow {
       flex-direction: column;
       overflow: visible;

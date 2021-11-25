@@ -22,10 +22,10 @@ function Info() {
         gsap.to(infoRef.querySelector(".ball"),{scrollTrigger:infoRef.querySelector(".ball"),opacity:1,delay:1.5})
     },[])
     return (
-        <section className="infoContainer" ref={e=>infoRef=e}>
+        <section className="infoContainer" id="Info" ref={e=>infoRef=e}>
             <div className="yellowLine"/>
             <div className="subContainer">
-                <div className="ball" />
+                <div className="ball"></div>
                 <p>
                     I'am Marcin Ziemba, young programmer with a goal of becomming Frontend Developer.
                     Eager to learn new things,ambitious and consistent.

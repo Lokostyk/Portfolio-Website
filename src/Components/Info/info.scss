@@ -22,11 +22,16 @@
     overflow: hidden;
     transform: translate(-50%, -50%);
     div {
+      margin-right: 0.2rem;
+      background: url("../../Css_Images/profileFinal.png");
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
       height: 200px;
       width: 200px;
       float: left;
       border-radius: 50%;
-      background-color: red;
+      background-color: white;
       opacity: 0;
     }
   }

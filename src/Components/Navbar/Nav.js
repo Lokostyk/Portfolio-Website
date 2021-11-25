@@ -22,10 +22,10 @@ function Nav() {
     return (
         <nav className="navbar" ref={e=>navRef=e}>
                 <button onClick={()=>Array.from(document.querySelectorAll(".navItem")).forEach((i)=>i.classList.add("active"))}><img src="/Images/navArrow.svg" /></button>
-                <a className="navItem active">Info</a>
-                <a className="navItem active">Projects</a>
-                <a className="navItem active">Skills</a>
-                <a className="navItem active">Contact</a>
+                <a href="#Info" className="navItem active">Info</a>
+                <a href="#Projects" className="navItem active">Projects</a>
+                <a href="#Skills" className="navItem active">Skills</a>
+                <a href="#Contact" className="navItem active">Contact</a>
         </nav>
     )
 }

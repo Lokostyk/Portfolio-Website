@@ -39,21 +39,21 @@ function Skills() {
         const allSkillsImages = containerRef.getElementsByTagName("img")
         const allSkillsNames = containerRef.getElementsByTagName("span")
         const tl = gsap.timeline({duration:1})
-        const tabletMobile = document.body.clientWidth < 1200
+        const mobileAndBigScreens = document.body.clientWidth < 1200 || document.body.clientHeight > 1000
         setTimeout(()=>{
             Array.from(allSkillsImages).forEach((el)=>{
                 tl.from(el,{scrollTrigger:{
                     trigger:el,
-                    start:`top ${tabletMobile?"85%":"70%"}`,
-                    end:`bottom ${tabletMobile?"55%":"40%"}`,
+                    start:`top ${mobileAndBigScreens?"85%":"70%"}`,
+                    end:`bottom ${mobileAndBigScreens?"55%":"40%"}`,
                     scrub: 1,
                 },opacity:0,duration:1})
             })
             Array.from(allSkillsNames).forEach((el)=>{
                 tl.from(el,{scrollTrigger:{
                     trigger:el,
-                    start:`top ${tabletMobile?"85%":"70%"}`,
-                    end:`bottom ${tabletMobile?"55%":"40%"}`,
+                    start:`top ${mobileAndBigScreens?"85%":"70%"}`,
+                    end:`bottom ${mobileAndBigScreens?"55%":"40%"}`,
                     scrub: 1,
                 },opacity:0,duration:1})
             })

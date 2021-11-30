@@ -1,12 +1,15 @@
 import React,{useState} from 'react'
 
 function ProjectCard(props) {
-    const {image,title,stack,reverse} = props.projectData
+    const {image,title,link,stack,reverse} = props.projectData
     const [displayReverse,setDisplayReverse] = useState(false)
     return (
             <div className={`projectCard ${displayReverse?"revertCard":""}`}>
                 <div className="front">
-                    <img src={image}/>
+                    <a href={link} target="_blank">
+                        <img className="websiteImgPreview" src={image}/>
+                        <img className="linkOutImg" src="/Images/linkout.png"/>
+                    </a>
                     <h1>{title}</h1>
                     <h3>Stack used:</h3>
                     <ul>

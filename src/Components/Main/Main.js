@@ -17,8 +17,8 @@ function Main() {
         <section className="mainContainer">
             <img className="backgroudImage" src="/Images/background.jpg"/>
             <div className="mainCircle">
-                <h1>Hi<br/>I am <div className="emphasisMain">Marcin</div></h1>
-                <p>Guy who creates <div className="emphasisMain">cool</div> and <div className="emphasisMain">functional</div> websites.</p>
+                <h1>Hi<br/>I am <span className="emphasisMain">Marcin</span></h1>
+                <p>Guy who creates <span className="emphasisMain">cool</span> and <span className="emphasisMain">functional</span> websites.</p>
                 <p>And have fun with it!</p>
             </div>
         </section>

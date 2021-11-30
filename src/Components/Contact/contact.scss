@@ -38,9 +38,10 @@
       text-align: center;
       border: 1px solid $emphasis;
       border-radius: 8px;
+      overflow: hidden;
       clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
       &:focus {
-        outline: 1px solid $emphasis;
+        border-bottom: 1px solid $emphasis;
         text-align: start;
       }
     }

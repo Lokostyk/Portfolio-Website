@@ -80,9 +80,34 @@
     .front {
       transition-delay: 0.3s;
       overflow: hidden;
-      & > img {
-        width: 28vw;
+    }
+    a {
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        .websiteImgPreview {
+          filter: grayscale(0%);
+        }
+        .linkOutImg {
+          opacity: 1;
+        }
       }
+    }
+    .websiteImgPreview {
+      filter: grayscale(50%);
+
+      width: 28vw;
+      transition: 0.3s all;
+    }
+    .linkOutImg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 40px;
+      width: 40px;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: 0.2s all;
     }
     .reverse {
       position: absolute;
@@ -146,7 +171,7 @@
   }
 }
 @media screen and (max-width: 1200px) {
-  .projectContainer .projectCard .front > img {
+  .projectContainer .projectCard .websiteImgPreview {
     width: 35vw;
   }
   .projectContainer {
@@ -155,7 +180,7 @@
 }
 @media screen and (max-width: 900px) {
   .projectContainer {
-    .projectCard .front > img {
+    .projectCard .websiteImgPreview {
       width: 38vw;
     }
   }
@@ -186,7 +211,7 @@
       &:before {
         display: none;
       }
-      .front > img {
+      .websiteImgPreview {
         width: 70vw;
       }
     }
@@ -204,7 +229,7 @@
       &:first-of-type {
         margin-right: 0;
       }
-      .front > img {
+      .websiteImgPreview {
         width: 90vw;
       }
     }

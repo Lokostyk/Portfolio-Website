@@ -8,7 +8,8 @@ gsap.registerPlugin(ScrollTrigger)
 function Contact() {
     let containerRef = useRef(null)
     const [formData,setFormData] = useState({email:"",name:"",title:"",content:""})
-
+    const [error,setError] = useState()
+    
     useEffect(()=>{
         setTimeout(()=>{
             Array.from(containerRef.getElementsByTagName("input")).forEach((item,index)=>{
@@ -27,7 +28,7 @@ function Contact() {
     return (
         <section className="contactContainer" id="Contact" ref={e=>containerRef=e}>
             <h1>Let's talk.But you first.</h1>
-            <form action="https://formsubmit.co/mziemba@loken.pl" method="POST" >
+            <form action="https://formsubmit.co/82b169f28868994680a6e351d0662643" method="POST" >
                 <input type="email" name="email" value={formData.email} placeholder="E-mail"
                      onChange={e=>setFormData({...formData,email:e.target.value})} required />
                 <input type="text" name="name" value={formData.title} placeholder="Title"

@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger)
 function Contact() {
     let containerRef = useRef(null)
     const [formData,setFormData] = useState({email:"",name:"",title:"",content:""})
-    const [error,setError] = useState()
     
     useEffect(()=>{
         setTimeout(()=>{

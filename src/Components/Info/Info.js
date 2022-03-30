@@ -1,10 +1,12 @@
 import "./info.scss"
-import React,{useEffect,useRef} from 'react'
+import React,{useContext, useEffect,useRef} from 'react'
 import gsap,{ScrollTrigger} from "gsap/all"
+import {LanguageContext} from "../../Context"
 
 gsap.registerPlugin(ScrollTrigger)
 function Info() {
     let infoRef = useRef(null)
+    const {language} = useContext(LanguageContext)
     useEffect(()=>{
         gsap.to(infoRef,{scrollTrigger:{
             trigger:infoRef,
@@ -27,12 +29,19 @@ function Info() {
             <div className="subContainer">
                 <div className="ball"></div>
                 <p>
-                    I'am Marcin Ziemba, young programmer with a goal of becomming Frontend Developer.
+                    {language?
+                    `I'am Marcin Ziemba, young programmer with a goal of becomming Full Stack Developer.
                     Eager to learn new things,ambitious and consistent.
                     I started programming with C++ quickly moved to web development.
                     It is what began to give me happiness and fulfillment.
                     Each of my projects is created with passion and attention to detail.
-                    As a communicative and friendly person, I'am comfortable with team work and sharing my knowledge to others.
+                    As a communicative and friendly person, I'am comfortable with team work and sharing my knowledge to others.`:
+                    `Nazywam się Marcin Ziemba, jestem młodym programistą z celem zostania Full Stack Developerem.
+                    Chętnie uczę się nowych rzeczy, jestem ambitny i sumienny.
+                    Moją przygode z programowaniem zacząłem z C++.
+                    Ale to właśnie tworzenie stron internetowych zaczęło dawać mi poczucie spełniena i "fun".
+                    Każdy mój projekt jest tworzony z pasją i przywiązaniem do detali.
+                    Jako komunikatywna i przyjazna osoba, nie mam problemu z pracą w zespole i dzieleniem się swoją wiedzą.`}
                 </p>
             </div>
         </section>

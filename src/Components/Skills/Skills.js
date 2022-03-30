@@ -1,11 +1,13 @@
 import "./skills.scss"
 
-import React,{useEffect,useRef} from 'react'
+import React,{useContext, useEffect,useRef} from 'react'
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
+import {LanguageContext} from "../../Context"
 
 gsap.registerPlugin(ScrollTrigger)
 function Skills() {
+    const {language} = useContext(LanguageContext)
     const skillsList = [
         {img:"figma.svg",name:"Figma"},
         {img:"github.svg",name:"GitHub/Git"},
@@ -69,8 +71,7 @@ function Skills() {
     },[])
     return (
         <section className="skillsContainer" id="Skills" ref={e=>containerRef=e}>
-            {document.body.clientWidth < 1200?
-                <h1>Current Stack</h1>:""}
+                <h1>{language?"Current Stack":"Umiejętności"}</h1>
             <ul>
                 {document.body.clientWidth < 1200? mobileSkillsList.map(item=>{
                     return <li key={item.name}><img src={`/Images/${item.img}`} alt={`${item.name} icon`} /><span>{item.name}</span></li>

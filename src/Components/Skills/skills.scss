@@ -6,8 +6,11 @@
   h1 {
     color: white;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
   ul {
+    margin-top: 0.5rem;
     margin-left: -1.5rem;
     display: flex;
     justify-content: center;
@@ -27,20 +30,6 @@
     text-align: center;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
-    &:nth-of-type(6) {
-      &::before {
-        content: "Current Stack";
-        position: absolute;
-        bottom: 120%;
-        left: 50%;
-        width: 200%;
-        font-size: 1.4rem;
-        font-weight: 500;
-        text-align: center;
-        color: white;
-        transform: translate(-50%, 0);
-      }
-    }
   }
   img {
     height: 6vw;

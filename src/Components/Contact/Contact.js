@@ -1,12 +1,14 @@
 import "./contact.scss"
 
-import React,{useState,useEffect,useRef} from 'react'
+import React,{useState,useEffect,useRef, useContext} from 'react'
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
+import {LanguageContext} from "../../Context"
 
 gsap.registerPlugin(ScrollTrigger)
 function Contact() {
     let containerRef = useRef(null)
+    const {language} = useContext(LanguageContext)
     const [formData,setFormData] = useState({email:"",name:"",title:"",content:""})
     
     useEffect(()=>{
@@ -26,15 +28,15 @@ function Contact() {
     },[])
     return (
         <section className="contactContainer" id="Contact" ref={e=>containerRef=e}>
-            <h1>Let's talk.But you first.</h1>
+            <h1>{language?"Let's talk.But you first.":"Napisz do mnie."}</h1>
             <form action="https://formsubmit.co/82b169f28868994680a6e351d0662643" method="POST" >
                 <input type="email" name="email" value={formData.email} placeholder="E-mail"
                      onChange={e=>setFormData({...formData,email:e.target.value})} required />
-                <input type="text" name="name" value={formData.title} placeholder="Title"
+                <input type="text" name="name" value={formData.title} placeholder={language?"Title":"Tytuł"}
                      onChange={e=>setFormData({...formData,title:e.target.value})} required />
-                <textarea name="message" value={formData.content} placeholder="Content" rows="7"
+                <textarea name="message" value={formData.content} placeholder={language?"Content":"Treść"} rows="7"
                     onChange={e=>setFormData({...formData,content:e.target.value})} required/>
-                <input type="submit" className="submitBtn" value="Send"/>
+                <input type="submit" className="submitBtn" value={language?"Send":"Wyślij"}/>
             </form>
             <p>OR</p>
             <div className="otherContacts">

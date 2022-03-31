@@ -27,10 +27,6 @@
       border: none;
       border-bottom: 1px solid $emphasis;
       clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-      &:focus {
-        outline: 1px solid $emphasis;
-        border-bottom: none;
-      }
     }
     textarea {
       margin-top: 0.8rem;
@@ -39,9 +35,10 @@
       border: 1px solid $emphasis;
       border-radius: 8px;
       overflow: hidden;
+      overflow-y: auto;
       clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
       &:focus {
-        border-bottom: 1px solid $emphasis;
+        outline: none;
         text-align: start;
       }
     }

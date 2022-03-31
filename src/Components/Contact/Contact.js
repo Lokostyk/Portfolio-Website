@@ -38,7 +38,7 @@ function Contact() {
                     onChange={e=>setFormData({...formData,content:e.target.value})} required/>
                 <input type="submit" className="submitBtn" value={language?"Send":"Wyślij"}/>
             </form>
-            <p>OR</p>
+            <p>{language?"OR":"LUB"}</p>
             <div className="otherContacts">
                 <a href="https://www.facebook.com/marcin.ziemba.79/" target="_blank"><img src="/Images/fb.svg" /></a>
                 <a href="https://www.linkedin.com/in/marcin-ziemba-8a6171217/" target="_blank"><img src="/Images/linkedin.svg"/></a>

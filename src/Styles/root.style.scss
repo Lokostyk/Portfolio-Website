@@ -12,3 +12,13 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+//Custom scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0,.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 0, 0.863);
+}

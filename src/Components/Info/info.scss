@@ -21,7 +21,7 @@
     width: 780px;
     overflow: hidden;
     transform: translate(-50%, -50%);
-    div {
+    .ball {
       margin-right: 0.8rem;
       background: url("../../Css_Images/profileFinal.png");
       background-position: top;
@@ -31,6 +31,7 @@
       width: 200px;
       float: left;
       border-radius: 50%;
+      border: 1px solid white;
       background-color: white;
       opacity: 0;
     }
@@ -48,8 +49,8 @@
       font-size: 1.5rem;
     }
     .subContainer {
-      width: 950px;
-      div {
+      width: 1150px;
+      .ball {
         width: 320px;
         height: 320px;
       }
@@ -60,7 +61,7 @@
   .infoContainer {
     .subContainer {
       width: 90%;
-      div {
+      .ball {
         margin: 0 auto;
         float: none;
       }

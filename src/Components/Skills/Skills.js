@@ -8,18 +8,23 @@ import {LanguageContext} from "../../Context"
 gsap.registerPlugin(ScrollTrigger)
 function Skills() {
     const {language} = useContext(LanguageContext)
-    const skillsList = [
-        {img:"figma.svg",name:"Figma"},
-        {img:"github.svg",name:"GitHub/Git"},
+        //     {img:"figma.svg",name:"Figma"},
+        // {img:"github.svg",name:"GitHub/Git"},
+    const skillsListFrontend = [
         {img:"html.svg",name:"HTML"},
         {img:"css.svg",name:"CSS"},
         {img:"sass.svg",name:"Sass"},
         {img:"javascript.svg",name:"Javascript(ES6)"},
+        {img:"typescript.svg",name:"Typescript"},
         {img:"react.svg",name:"React"},
         {img:"redux.svg",name:"React-redux"},
-        {img:"router.png",name:"React-router"},
-        {img:"firebase.svg",name:"Firebase"},
-        {img:"gsap.svg",name:"Gsap"}
+        {img:"jest.svg",name:"Jest"},
+        {img:"cypress.svg",name:"Cypress"}
+    ]
+    const skillsListBackend = [
+        {img:"nodejs.svg",name:"Node Js"},
+        {img:"express.svg",name:"Express"},
+        {img:"mongodb.svg",name:"MongoDB"},
     ]
     const mobileSkillsList = [
         {img:"javascript.svg",name:"Javascript(ES6)"},
@@ -71,13 +76,19 @@ function Skills() {
     },[])
     return (
         <section className="skillsContainer" id="Skills" ref={e=>containerRef=e}>
-                <h1>{language?"Current Stack":"Umiejętności"}</h1>
+            <h1>{language?"Current Stack":"Umiejętności"}</h1>
+            <h2>Frontend:</h2>
             <ul>
-                {document.body.clientWidth < 1200? mobileSkillsList.map(item=>{
+                {document.body.clientWidth < 1200? skillsListFrontend.map(item=>{
                     return <li key={item.name}><img src={`/Images/${item.img}`} alt={`${item.name} icon`} /><span>{item.name}</span></li>
-                }):skillsList.map((item,index)=>{
-                    return <li key={item.name} style={{marginBottom:`${index<5?1*index:(10-index)*1}rem`}}><img src={`/Images/${item.img}`} alt={`${item.name} icon`} /><span>{item.name}</span></li>
-                })}
+                }):skillsListFrontend.map((item,index)=>{
+                    return <li key={item.name} style={{marginBottom:`${index < 5?1*index:(8-index)*1}rem`}}><img src={`/Images/${item.img}`} alt={`${item.name} icon`} /><span>{item.name}</span></li>})
+                }
+            </ul>
+            <h2>Backend:</h2>
+            <ul>
+                {skillsListBackend.map((item)=>{
+                return <li key={item.name} style={{marginBottom:"1rem"}}><img src={`/Images/${item.img}`} alt={`${item.name} icon`} /><span>{item.name}</span></li>})}
             </ul>
         </section>
     )

@@ -21,8 +21,8 @@ function Main() {
     return (
         <section className="mainContainer">
             <div className="lanButtonsConatiner">
-                <button onClick={()=>changeLanguage(true)}>ENG</button>
-                <button onClick={()=>changeLanguage(false)}>PL</button>
+                <button onClick={()=>changeLanguage(true)} className={`${language?"active":""}`}>ENG</button>
+                <button onClick={()=>changeLanguage(false)} className={`${language?"":"active"}`}>PL</button>
             </div>
             <img className="backgroudImage" src="/Images/background.jpg"/>
             <div className="mainCircle">

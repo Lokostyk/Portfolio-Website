@@ -4,13 +4,19 @@
   width: 100vw;
   background-color: $background;
   h1 {
+    margin-bottom: .3rem;
     color: white;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
   }
+  h2 {
+    text-align: center;
+    color: $emphasis;
+  }
   ul {
-    margin-top: 0.5rem;
+    margin-top: .3rem;
+    margin-bottom: 2rem;
     margin-left: -1.5rem;
     display: flex;
     justify-content: center;
@@ -30,8 +36,13 @@
     text-align: center;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   img {
+    object-fit: contain;
     height: 6vw;
   }
 }
@@ -41,11 +52,17 @@
     ul {
       margin-left: -3rem;
     }
+    li {
+      img {
+        margin: .25rem;
+      }
+    }
   }
 }
 @media screen and (max-width: 1200px) {
   .skillsContainer {
     ul {
+      margin-top: 0;
       margin-left: 1.5rem;
       flex-wrap: wrap;
     }
@@ -55,7 +72,12 @@
       width: 18vw;
       align-items: center;
       justify-content: center;
+      span {
+        margin-top: auto;
+        margin-bottom: 1rem;
+      }
       img {
+      margin-top: auto;
         height: auto;
         width: 5rem;
       }

@@ -26,19 +26,6 @@ function Skills() {
         {img:"express.svg",name:"Express"},
         {img:"mongodb.svg",name:"MongoDB"},
     ]
-    const mobileSkillsList = [
-        {img:"javascript.svg",name:"Javascript(ES6)"},
-        {img:"react.svg",name:"React"},
-        {img:"redux.svg",name:"React-redux"},
-        {img:"router.png",name:"React-router"},
-        {img:"gsap.svg",name:"Gsap"},
-        {img:"sass.svg",name:"Sass"},
-        {img:"css.svg",name:"CSS"},
-        {img:"html.svg",name:"HTML"},
-        {img:"github.svg",name:"GitHub/Git"},
-        {img:"figma.svg",name:"Figma"},
-        {img:"firebase.svg",name:"Firebase"},
-    ]
 
     let containerRef = useRef(null)
     useEffect(()=>{

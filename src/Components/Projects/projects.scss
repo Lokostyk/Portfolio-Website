@@ -211,11 +211,17 @@
     .overflow {
       flex-direction: column;
       overflow: visible;
+      pointer-events: none;
     }
     .projectCard {
       margin: 1rem 0;
       pointer-events: none;
       transform: scale(1);
+      .front {
+        a {
+          pointer-events: all;
+        }
+      }
       &:nth-of-type(2) {
         margin: 1rem 0;
       }
@@ -224,7 +230,7 @@
         transform: none;
       }
       &:last-of-type {
-        .fron {
+        .front {
           box-shadow: $emphasis 0px -1px 3px;
         }
       }

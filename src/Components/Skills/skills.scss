@@ -72,14 +72,25 @@
       width: 18vw;
       align-items: center;
       justify-content: center;
+      &:hover {
+        transform: none;
+        span {
+          transform: scale(1.1);
+        }
+        img {
+          transform: scale(1.1);
+        }
+      }
       span {
         margin-top: auto;
         margin-bottom: 1rem;
+        transition: transform .3s;
       }
       img {
-      margin-top: auto;
+        margin-top: auto;
         height: auto;
         width: 5rem;
+        transition: transform .3s;
       }
       &:nth-of-type(6) {
         &::before {
@@ -112,6 +123,7 @@
         width: 3rem;
       }
       span {
+        margin-bottom: .2rem;
         font-size: 0.9rem;
       }
     }

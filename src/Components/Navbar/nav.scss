@@ -43,8 +43,14 @@
 }
 @media screen and (max-width: 550px) {
   .navbar {
+    .navItem {
+      font-size: 1.1rem;
+    }
+    button {
+      margin-right: 1rem;
+    }
     .active {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem .8rem;
       &:last-of-type {
         padding-right: 1.5rem;
       }
@@ -53,17 +59,21 @@
 }
 @media screen and (max-width: 420px) {
   .navbar {
+    button {
+      margin-right: .5rem;
+      img {
+        height: 25px;
+      
+      }
+    }
     .navItem {
-      font-size: 1rem;
+      font-size: .8rem;
     }
     .active {
       padding: 0.57rem 0.5rem;
       &:last-of-type {
         padding-right: 1.5rem;
       }
-    }
-    button {
-      margin-right: 1rem;
     }
   }
 }

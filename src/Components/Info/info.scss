@@ -1,6 +1,6 @@
 @import "../../Styles/mainColors";
 .infoContainer {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: relative;
   background-color: $background;
@@ -44,12 +44,12 @@
 }
 @media screen and (min-width: 1920px) {
   .infoContainer {
-    height: 80vh;
+    min-height: 80vh;
     p {
       font-size: 1.5rem;
     }
     .subContainer {
-      width: 1150px;
+      width: 900px;
       .ball {
         width: 320px;
         height: 320px;
